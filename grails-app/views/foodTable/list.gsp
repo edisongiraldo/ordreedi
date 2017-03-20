@@ -6,14 +6,17 @@
     <asset:stylesheet src="application.css"/>
 
     <g:javascript>
-        function callForm(){
+        function callForm(pTableName){
             $.ajax({
-                    type: "GET",
+                    type: "POST",
                     url: "tableOrderForm",
-                    datatype: "html"
+                    datatype: "html",
+                    data:{
+                        tableName: pTableName
+                    }
             }).success(function(data) {
                 console.log(data);
-                $('.modal-body').html(data);
+                $('.modal-content').html(data);
                 $('#myModal').modal('show');
             });
         }
@@ -34,12 +37,9 @@
     </table>
 
     <!-- Modal -->
-    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h3 id="myModalLabel">Members</h3>
-        </div>
-        <div class="modal-body">
+    <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
         </div>
     </div>
 

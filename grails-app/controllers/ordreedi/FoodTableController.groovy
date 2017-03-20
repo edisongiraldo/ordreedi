@@ -11,8 +11,7 @@ class FoodTableController {
     	return [list:listFoodTable]
     }
 
-    def tableOrderForm(){
-    	render "Prueba de formulario"
-    	render(view: "tableOrderForm", model: [mensaje: "Encabezado Factura Grabado Correctamente"])
+    def tableOrderForm(params){
+    	render(template: "tableOrderForm", model: [tableName: params.tableName])
     }
 }

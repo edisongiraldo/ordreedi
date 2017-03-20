@@ -11,7 +11,14 @@
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
+
+      <g:javascript library="application"/>
+      <g:javascript library="jquery"/>
+      <g:javascript library="jquery-ui"/> 
+      <r:layoutResources />
+      <g:loadbootstrap/> 
 </head>
+
 <body>
 
     <div class="navbar navbar-default navbar-static-top" role="navigation">

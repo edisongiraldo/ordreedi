@@ -13,6 +13,6 @@ class Menu {
     }
 
     String toString(){
-        return "${itemName + " " + unitsAvailable}"
+        return "${itemName}"
     }
 }

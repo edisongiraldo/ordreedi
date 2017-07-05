@@ -27,6 +27,36 @@ class BootStrap {
         					)
         					.save()
 
+            // Inventary init
+            def menu = new Menu(
+                            itemName: "Coca-Cola Zero", unitsAvailable: 1000
+                        )
+                        .save()
+
+            menu = new Menu(
+                            itemName: "Coca-Cola", unitsAvailable: 2000
+                        )
+                        .save()
+
+            menu = new Menu(
+                            itemName: "Sprite", unitsAvailable: 2
+                        )
+                        .save()
+
+            menu = new Menu(
+                            itemName: "RoastBeef", unitsAvailable: 50
+                        )
+                        .save()
+
+            menu = new Menu(
+                            itemName: "TBoney Pig Meat", unitsAvailable: 50
+                        )
+                        .save()
+
+            menu = new Menu(
+                            itemName: "Thai Rice", unitsAvailable: 0
+                        )
+                        .save()
         }
 
     }

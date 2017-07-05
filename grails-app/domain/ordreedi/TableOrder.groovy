@@ -12,7 +12,7 @@ class TableOrder {
 
     static belongsTo = [foodtable: FoodTable]
 
-    static hasMany = [orderitem: OrderItem]
+    static hasMany = [orderitems: OrderItem]
 
     static constraints = {
     }
